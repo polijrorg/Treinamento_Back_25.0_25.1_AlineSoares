@@ -1,5 +1,5 @@
 import { isThisISOWeek } from "date-fns";
-import Users from "../models/users";
+import Users from "../models/Users";
 
 interface ICreateUserDTO{
     id: string;

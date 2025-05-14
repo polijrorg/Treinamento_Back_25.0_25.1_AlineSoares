@@ -1,4 +1,4 @@
-class users {
+class Users {
     id: string;
 
     name: string;
