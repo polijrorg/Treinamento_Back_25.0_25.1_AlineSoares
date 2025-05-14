@@ -8,7 +8,7 @@ import UpdateUserService from '../services/UpdateUserService';
 const usersRouter = Router();
 export const userRepository = new usersRepository();
 
-usersRouter.post('/', (request: Request, response: Response) => {
+usersRouter.post('/create', (request: Request, response: Response) => {
      try {
           const { name, email, cpf } = request.body;
 
