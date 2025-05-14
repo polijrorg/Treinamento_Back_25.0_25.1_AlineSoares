@@ -16,11 +16,15 @@ interface IUpdateUserDTO{
     }
 }
 
-class usersRepository{
+class UsersRepository{
     private users = Users[];
 
     constructor(){
         this.users = [];
+    }
+
+    public findUserById(id: String): Users | null {
+        return this.users.find((user: Users) => user.id == id);
     }
 
     public findUserByCPF(cpf: String): Users | undefined {
@@ -64,4 +68,4 @@ class usersRepository{
     }
 }
 
-export default usersRepository
+export default UsersRepository;

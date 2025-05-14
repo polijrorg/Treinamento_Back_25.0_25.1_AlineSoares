@@ -16,7 +16,7 @@ class Users {
         name,
         email,
         cpf,
-    }: Omit <Users, 'created-at' | 'updaed_at'>) {
+    }: Omit <Users, 'created-at' | 'updated_at'>) {
         this.id = id;
         this.name = name;
         this.email = email;

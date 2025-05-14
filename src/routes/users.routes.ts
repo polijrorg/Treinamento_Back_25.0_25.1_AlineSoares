@@ -2,8 +2,8 @@ import { Router, Request, Response } from 'express';
 import { v4 as uuid } from 'uuid';
 import CreateUserService from '../services/CreateUserService';
 import usersRepository from '../repositories/UsersRepository';
-import GetUserService from '../services/GetUserService';
 import DeleteUserService from '../services/DeleteUserService';
+import UpdateUserService from '../services/UpdateUserService';
 
 const usersRouter = Router();
 export const userRepository = new usersRepository();

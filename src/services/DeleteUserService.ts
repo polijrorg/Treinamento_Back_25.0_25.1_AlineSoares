@@ -1,14 +1,14 @@
-import Users from "../models/users";
-import usersRepository from "../repositories/UsersRepository";
+import Users from "../models/Users";
+import UsersRepository from "../repositories/UsersRepository";
 
 interface IRequest{
     id: string;
 }
 
 class DeleteUserService {
-    private usersRepository: usersRepository;
+    private usersRepository: UsersRepository;
 
-    constructor(usersRepository: usersRepository){
+    constructor(usersRepository: UsersRepository){
         this.usersRepository = usersRepository;
     }
 

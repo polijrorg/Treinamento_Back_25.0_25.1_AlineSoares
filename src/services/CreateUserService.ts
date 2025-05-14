@@ -1,5 +1,5 @@
-import Users from "../models/users";
-import usersRepository from "../repositories/UsersRepository";
+import Users from "../models/Users";
+import UsersRepository from "../repositories/UsersRepository";
 
 interface IRequest{
     id: string;
@@ -9,17 +9,17 @@ interface IRequest{
 }
 
 class CreateUserService {
-    private usersRepository: usersRepository;
+    private usersRepository: UsersRepository;
 
-    constructor(usersRepository: usersRepository){
+    constructor(usersRepository: UsersRepository){
         this.usersRepository = usersRepository;
     }
 
     public execute(data: IRequest){
-        const userwithCPF = this.usersRepository.findUserbyCPF(data.cpf);
+        const userwithCPF = this.usersRepository.findUserByCPF(data.cpf);
         if(userwithCPF) { throw Error('Já existe um usuário com esse cpf');}
 
-        const userwithemail = this.usersRepository.findUserbyEmail(data.email);
+        const userwithemail = this.usersRepository.findUserByEmail(data.email);
         if(userwithemail) { throw Error('Já existe um usuário com esse email');}
 
         const user = this.usersRepository.create(data);
