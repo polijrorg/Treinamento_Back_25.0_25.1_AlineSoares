@@ -21,7 +21,7 @@ class UpdateUserService {
 
         if(!userwithId){ throw Error('Esse usuário não existe');}
 
-        const userwithemail = this.usersRepository.findUserbyEmail(data.data.email);
+        const userwithemail = this.usersRepository.findUserByEmail(data.data.email);
         if(userwithemail) { throw Error('Já existe um usuário com esse email');}
 
         const user = this.usersRepository.update(data);

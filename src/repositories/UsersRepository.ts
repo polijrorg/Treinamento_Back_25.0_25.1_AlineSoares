@@ -17,13 +17,13 @@ interface IUpdateUserDTO{
 }
 
 class UsersRepository{
-    private users = Users[];
+    private users : Users[];
 
     constructor(){
         this.users = [];
     }
 
-    public findUserById(id: String): Users | null {
+    public findUserById(id: String): Users | undefined {
         return this.users.find((user: Users) => user.id == id);
     }
 
@@ -58,7 +58,7 @@ class UsersRepository{
     }
 
     public findIndexById(id: String): number {
-        const index = this.users.findIndex((user: Users) => user.id == data.id);
+        const index = this.users.findIndex((user: Users) => user.id == id);
 
         return index;
     }

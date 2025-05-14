@@ -17,7 +17,7 @@ class DeleteUserService {
 
         if(!userwithId){ throw Error('Esse usuário não existe');}
 
-        const index = this.usersRepository.findUserById(data.id);
+        const index = this.usersRepository.findIndexById(data.id);
 
         this.usersRepository.delete(index);
 
